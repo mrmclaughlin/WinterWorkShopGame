@@ -6243,6 +6243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: The_Hallwyl_Museum_1st_Floor_Combined
       objectReference: {fileID: 0}
+    - target: {fileID: 6360833994283624975, guid: 6913b8874121a7c4f99d1b4974b7ef42,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7617532906326654548, guid: 6913b8874121a7c4f99d1b4974b7ef42,
         type: 3}
       propertyPath: m_RootOrder
