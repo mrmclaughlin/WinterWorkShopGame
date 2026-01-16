@@ -5523,7 +5523,7 @@ MonoBehaviour:
   _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
   _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
   profilerTcpPort: 32419
-  expandMixedRealityCapturePropertySheet: 0
+  expandMixedRealityCapturePropertySheet: 1
   enableMixedReality: 0
   compositionMethod: 0
   extraHiddenLayers:
@@ -5571,7 +5571,7 @@ MonoBehaviour:
   LateControllerUpdate: 1
   LateLatching: 0
   _readOnlyControllerDrivenHandPosesType: 0
-  controllerDrivenHandPosesType: 0
+  controllerDrivenHandPosesType: 2
 --- !u!4 &477252819
 Transform:
   m_ObjectHideFlags: 0
@@ -7956,7 +7956,7 @@ MonoBehaviour:
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
-  m_AnimateModel: 0
+  m_AnimateModel: 1
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
   m_PositionAction:
@@ -10419,8 +10419,6 @@ Transform:
   m_Children:
   - {fileID: 1702415191}
   - {fileID: 978955451}
-  - {fileID: 548389797}
-  - {fileID: 1591100685}
   m_Father: {fileID: 650672842}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10864,15 +10862,19 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 920921511}
+    m_TransformParent: {fileID: 996187917}
     m_Modifications:
     - target: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: m_Name
       value: OVRHandPrefabLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4453513310108136, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4453513310108136, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10924,6 +10926,16 @@ PrefabInstance:
       propertyPath: _ovrSkeleton
       value: 
       objectReference: {fileID: 548389802}
+    - target: {fileID: 114392993255165844, guid: 835e735ca71bf78459fb2cababd74112,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114392993255165844, guid: 835e735ca71bf78459fb2cababd74112,
+        type: 3}
+      propertyPath: _skeletonMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: bd0bb729cb6159b4ab21c5f62cad24ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
 --- !u!1001 &944784344
@@ -11348,6 +11360,7 @@ Transform:
   - {fileID: 1595251472961323862}
   - {fileID: 270416044}
   - {fileID: 607332702}
+  - {fileID: 548389797}
   m_Father: {fileID: 1797605201}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11940,6 +11953,7 @@ Transform:
   - {fileID: 3266887666872949415}
   - {fileID: 299323477}
   - {fileID: 1669000317}
+  - {fileID: 1591100685}
   m_Father: {fileID: 1797605201}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20486,8 +20500,10 @@ MonoBehaviour:
   m_UseOptimizedControls: 1
   m_MetaQuestLeftHandMesh: {fileID: 2119128822190643692}
   m_MetaQuestRightHandMesh: {fileID: 2746493917655547933}
-  m_AndroidXRLeftHandMesh: {fileID: 0}
-  m_AndroidXRRightHandMesh: {fileID: 0}
+  m_AndroidXRLeftHandMesh: {fileID: 919132149155446097, guid: bf7151579c38e2a44be94ba8773876c1,
+    type: 3}
+  m_AndroidXRRightHandMesh: {fileID: 919132149155446097, guid: 56186ccf27ad7864681108ed88349071,
+    type: 3}
   m_HandMeshMaterial: {fileID: 2100000, guid: 049886ac1c9be8d4db643c92eee3880f, type: 2}
   m_DrawMeshes: 1
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868,
@@ -21155,11 +21171,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 920921511}
+    m_TransformParent: {fileID: 1086462715}
     m_Modifications:
     - target: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: m_Name
       value: OVRHandPrefabRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870938896605422, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4453513310108136, guid: 835e735ca71bf78459fb2cababd74112, type: 3}
       propertyPath: m_RootOrder
@@ -21215,6 +21235,11 @@ PrefabInstance:
       propertyPath: _ovrSkeleton
       value: 
       objectReference: {fileID: 1591100690}
+    - target: {fileID: 114392993255165844, guid: 835e735ca71bf78459fb2cababd74112,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114428879332287356, guid: 835e735ca71bf78459fb2cababd74112,
         type: 3}
       propertyPath: HandType
