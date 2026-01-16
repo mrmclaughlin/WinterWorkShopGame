@@ -11,15 +11,18 @@ public class PassthroughTrigger : MonoBehaviour
             passthrough.enabled = false; // start OFF
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (passthrough != null && other.CompareTag(rigTag))
-            passthrough.enabled = true; // turn ON
-    }
+   private void OnTriggerEnter(Collider other)
+{
+    if (passthrough == null) return;
+    if (other.GetComponentInParent<CharacterController>() != null)
+        passthrough.enabled = true;
+}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (passthrough != null && other.CompareTag(rigTag))
-            passthrough.enabled = false; // turn OFF
-    }
+private void OnTriggerExit(Collider other)
+{
+    if (passthrough == null) return;
+    if (other.GetComponentInParent<CharacterController>() != null)
+        passthrough.enabled = false;
+}
+
 }
